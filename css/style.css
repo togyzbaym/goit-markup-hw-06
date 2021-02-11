@@ -48,6 +48,16 @@ ul {
   padding: 0px;
   margin: 0px;
 }
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 /*=========HEDER==========*/
 .header {
@@ -825,27 +835,57 @@ ul {
 }
 
 /*==============forum======================*/
-.forum-contact-container {
+.user-contact-form {
+  display: flex;
+  flex-direction: column;
   padding: 40px;
 }
-.user-contact-form .text-third-title {
+.call-to-action {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   text-transform: none;
   letter-spacing: 0.03em;
+  margin-bottom: 12px;
   color: #212121;
 }
-
+.user-cont-lable {
+  margin-bottom: 4px;
+}
 .user-cont-input {
+  display: block;
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 15px;
+  padding-left: 42px;
+  transition: border-color 250ms linear;
 }
-
+.user-cont-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.user-input-wraper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+.form-input-icon {
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  margin-right: 15px;
+  transition: fill 250ms linear;
+}
+.user-cont-input:focus + .form-input-icon {
+  fill: var(--accent-color);
+}
 .user-comment {
   width: 100%;
   height: 120px;
@@ -853,8 +893,21 @@ ul {
   margin: 0 auto;
   margin-bottom: 25px;
   resize: none;
+  font-size: 14px;
+  line-height: 1.143px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms linear;
+}
+.user-comment::placeholder {
+  font-size: 14px;
+  line-height: 1.143px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.user-comment:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 .user-cont-lable {
   font-size: 12px;
@@ -862,25 +915,44 @@ ul {
   letter-spacing: 0.01em;
   color: #757575;
 }
-.chec-label {
+.user-polis-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.costom-police-lable {
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
   margin-left: 8px;
 }
-.contract-terms {
+.costom-police-contract {
   color: var(--accent-color);
 }
-.forum-checkbox {
+.costom-checkbox-icon {
   width: 16px;
   height: 15px;
+  border: 1px solid #212121;
+  transition: background-color 250ms linear;
+  border-radius: 2px;
+}
+.costom-police-checkbox:checked + .costom-checkbox-icon {
+  outline: none;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+.costom-police-checkbox:focus + .costom-checkbox-icon {
+  outline: none;
+  border-color: var(--accent-color);
 }
 .forum-submit {
   margin-top: 30px;
   padding: 10px auto;
   width: 200px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   background-color: var(--accent-color);
   color: #ffffff;
@@ -889,17 +961,22 @@ ul {
   border-radius: 4px;
 }
 /*==============footer forum=================*/
-.footer-forum-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-forum {
 }
-.footer-forum .text-third-title {
+.footer-forum .call-to-action {
+  display: block;
   font-size: 14px;
   line-height: 1.142;
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
+}
+.footer-user-contact-wraper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .footer-forum .user-cont-input {
   width: 368px;
@@ -913,13 +990,22 @@ ul {
 }
 
 .footer-forum .forum-submit {
-  padding: 10px auto;
-  width: 200px;
+  padding: 10px 62px 10px 29px;
+  min-width: 200px;
   height: 50px;
   margin: 0;
   background-color: var(--accent-color);
   color: #ffffff;
-  border: 1px solid transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+.footer-forum .forum-submit:focus {
+}
+.user-send-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
 }
