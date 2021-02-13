@@ -736,7 +736,7 @@ ul {
 .social-media {
   width: 206px;
   height: 80px;
-  margin-right: 93px;
+  margin-right: 83px;
   /*outline: 1px solid #2196f3;*/
 }
 .social-media .text-third-title {
@@ -821,19 +821,30 @@ ul {
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: cursor 250ms linear;
 }
 
 .btn-close {
   width: 11px;
   height: 11px;
   fill: #000000;
+  transition: fill 250ms linear;
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  outline: none;
+  cursor: pointer;
+}
 
+.modal-close-btn:hover,
+.modal-close-btn:focus .btn-close {
+  fill: var(--accent-color);
+}
 /*==============forum======================*/
 .user-contact-form {
   display: flex;
@@ -933,6 +944,7 @@ ul {
 .costom-checkbox-icon {
   width: 16px;
   height: 15px;
+  left: 0;
   border: 1px solid #212121;
   transition: background-color 250ms linear;
   border-radius: 2px;
@@ -962,6 +974,7 @@ ul {
 }
 /*==============footer forum=================*/
 .footer-forum {
+  padding: 10px;
 }
 .footer-forum .call-to-action {
   display: block;
