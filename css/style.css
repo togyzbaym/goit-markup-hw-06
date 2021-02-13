@@ -637,21 +637,17 @@ ul {
   height: 38px;
   padding: 6px 22px;
   margin-right: 8px;
-
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-modal-btn:hover,
 .filter-modal-btn:focus {
-  /*text-decoration: underline solid var(--accent-color);*/
+  outline: none;
   background-color: var(--accent-color);
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-.filter-modal-btn:active {
-  columns: var(--active-color);
 }
 
 .portfolio-galery-list {
@@ -826,14 +822,14 @@ ul {
   border-radius: 50%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: cursor 250ms linear;
+  transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-close {
   width: 11px;
   height: 11px;
   fill: #000000;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   opacity: 0;
@@ -876,7 +872,7 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-cont-input:focus {
   outline: none;
@@ -897,7 +893,7 @@ ul {
   left: 15px;
   transform: translateY(-50%);
   margin-right: 15px;
-  transition: fill 250ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-cont-input:focus + .form-input-icon {
   fill: var(--accent-color);
@@ -913,7 +909,7 @@ ul {
   line-height: 1.143px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-comment::placeholder {
   font-size: 14px;
@@ -956,7 +952,8 @@ ul {
   height: 15px;
   left: 0;
   border: 1px solid #212121;
-  transition: background-color 250ms linear, border-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
 }
 .custom-police-checkbox:checked + .custom-checkbox-icon {
@@ -1014,7 +1011,7 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-forum .user-cont-input:focus {
   border-color: var(--accent-color);
