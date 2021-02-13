@@ -932,36 +932,41 @@ ul {
   align-items: center;
 }
 .costom-police-lable {
+  position: relative;
+  padding-left: 24px;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-left: 8px;
 }
-.costom-police-contract {
+.custom-police-link {
   color: var(--accent-color);
 }
-.costom-checkbox-icon {
+.custom-checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: -9px;
+  transform: translateY(-50%);
   width: 16px;
   height: 15px;
   left: 0;
   border: 1px solid #212121;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms linear, border-color 250ms linear;
   border-radius: 2px;
 }
-.costom-police-checkbox:checked + .costom-checkbox-icon {
+.custom-police-checkbox:checked + .custom-checkbox-icon {
   outline: none;
   border-color: var(--accent-color);
   background-color: var(--accent-color);
 }
-.costom-police-checkbox:focus + .costom-checkbox-icon {
+.custom-police-checkbox:focus + .custom-checkbox-icon {
   outline: none;
   border-color: var(--accent-color);
 }
 .forum-submit {
   margin-top: 30px;
   padding: 10px auto;
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
