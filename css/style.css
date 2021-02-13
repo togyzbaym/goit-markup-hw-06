@@ -121,6 +121,7 @@ ul {
 }
 .nav-list-link:hover,
 .nav-list-link:focus {
+  outline: none;
   /*text-decoration: underline solid var(--accent-color);*/
   color: var(--accent-color);
 }
@@ -475,6 +476,7 @@ ul {
 }
 .costom-list-link:hover,
 .costom-list-link:focus {
+  outline: none;
   border: 1px solid var(--accent-color);
 }
 .custom-icon-yaco {
@@ -547,6 +549,7 @@ ul {
 }
 .address-link:hover,
 .address-link:focus {
+  outline: none;
   /*text-decoration: underline solid var(--accent-color);*/
   color: var(--accent-color);
 }
@@ -576,6 +579,7 @@ ul {
 }
 .footer .contact-list-link:hover,
 .contact-list-link:focus {
+  outline: none;
   color: var(--accent-color);
 }
 
@@ -770,6 +774,7 @@ ul {
 }
 .social-media-link:focus,
 .social-media-link:hover {
+  outline: none;
   background-color: var(--accent-color);
 }
 .footer-container .social-media-link {
@@ -1009,6 +1014,10 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition: border-color 250ms linear;
+}
+.footer-forum .user-cont-input:focus {
+  border-color: var(--accent-color);
 }
 
 .footer-forum .forum-submit {
